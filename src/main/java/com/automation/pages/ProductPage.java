@@ -11,11 +11,11 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class ProductsPage {
+public class ProductPage {
 
     WebDriver driver;
 
-    public ProductsPage(WebDriver driver) {
+    public ProductPage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
@@ -31,7 +31,7 @@ public class ProductsPage {
 
     By listOfProducts = By.xpath("//div[@class='features_items']/div[@class='col-sm-4']");
     By titleProduct = By.cssSelector(".productinfo.text-center > p");
-    By viewProductBtn = By.xpath("//div[@class='choose']/ul/li/a");
+    By viewProductBtn = By.cssSelector(".choose > ul > li > a");
 
     public void clickFilterTShirt() {
         menBtn.click();

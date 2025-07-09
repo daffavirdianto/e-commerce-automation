@@ -24,6 +24,7 @@ public class ProductDetailPage {
     public WebElement viewCartBtn;
 
     public void setQuantity() throws InterruptedException {
+        inputQuantity.clear();
         inputQuantity.sendKeys("2");
         addToCartBtn.click();
         Thread.sleep(20);

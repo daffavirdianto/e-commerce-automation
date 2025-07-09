@@ -13,13 +13,13 @@ import com.automation.pages.Page;
 import com.automation.pages.PaymentDonePage;
 import com.automation.pages.PaymentPage;
 import com.automation.pages.ProductDetailPage;
-import com.automation.pages.ProductsPage;
+import com.automation.pages.ProductPage;
 
 public class CheckouTest extends BaseTest{
 
     Page page;
     LoginPage loginPage;
-    ProductsPage productsPage;
+    ProductPage productsPage;
     ProductDetailPage productDetailPage;
     CartPage cartPage;
     CheckoutPage checkoutPage;
@@ -41,7 +41,7 @@ public class CheckouTest extends BaseTest{
         super.setUp();
         page = new Page(driver);
         loginPage = new LoginPage(driver);
-        productsPage = new ProductsPage(driver);
+        productsPage = new ProductPage(driver);
         productDetailPage = new ProductDetailPage(driver);
         cartPage = new CartPage(driver);
         checkoutPage = new CheckoutPage(driver);

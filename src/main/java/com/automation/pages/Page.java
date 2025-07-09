@@ -27,6 +27,9 @@ public class Page {
     @FindBy(xpath = "//a[@href='/logout']")
     public WebElement logoutLink;
 
+    @FindBy(xpath = "//a[@href='/products']")
+    public WebElement productsLink;
+
     By homeTitle = By.xpath("//div[@class='col-sm-6']/h1");
 
     By loginSuccess = By.xpath("//b");
@@ -45,6 +48,12 @@ public class Page {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(driver -> deleteAccountLink.isDisplayed() && deleteAccountLink.isEnabled());
         deleteAccountLink.click();
+    }
+
+    public void navigateToProducts() {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(driver -> productsLink.isDisplayed() && productsLink.isEnabled());
+        productsLink.click();
     }
     
     public String getHomeTitle() {

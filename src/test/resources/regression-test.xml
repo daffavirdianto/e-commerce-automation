@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Regression Test Suite">
+  <test name="AllTests">
+    <classes>
+      <class name="selenium.RegistrationTest"/>
+      <class name="selenium.LoginTest"/>
+      <class name="selenium.CheckoutTest"/>
+      <class name="runners.SeleniumRunner"/>
+    </classes>
+  </test>
+</suite>

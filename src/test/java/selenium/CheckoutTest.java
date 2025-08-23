@@ -17,7 +17,7 @@ import com.automation.pages.ProductPage;
 
 import helper.ConfigManager;
 
-public class CheckouTest extends BaseTest{
+public class CheckoutTest extends BaseTest{
 
     Page page;
     LoginPage loginPage;

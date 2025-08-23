@@ -85,9 +85,8 @@
                     <artifactId>maven-surefire-plugin</artifactId>
                     <version>3.5.3</version>
                     <configuration>
-                        <forkCount>0</forkCount>
                         <suiteXmlFiles>
-                            <suiteXmlFile>${suiteXml}</suiteXmlFile>
+                            <suiteXml>src/test/resources/regression-test.xml</suiteXml>
                         </suiteXmlFiles>
                     </configuration>
                 </plugin>

@@ -2,6 +2,7 @@ package com.automation.base;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseTest {
 
@@ -9,7 +10,7 @@ public class BaseTest {
 
     public void setUp(String url) {
         System.out.println("Setting up the test environment...");
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\Daffa Virdianto\\web-automation-playground\\chromedriver.exe");
+        WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.get(url);
         driver.manage().window().maximize();

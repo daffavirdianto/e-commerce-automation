@@ -10,6 +10,8 @@ import com.automation.base.BaseTest;
 import com.automation.pages.LoginPage;
 import com.automation.pages.Page;
 
+import helper.ConfigManager;
+
 public class LoginTest extends BaseTest {
 
     Page page;
@@ -17,7 +19,8 @@ public class LoginTest extends BaseTest {
 
     @BeforeMethod
     public void setUp() {
-        super.setUp();
+        String url = ConfigManager.getUrl();
+        super.setUp(url);
         
         page = new Page(driver);
         loginPage = new LoginPage(driver);

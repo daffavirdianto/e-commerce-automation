@@ -15,6 +15,8 @@ import com.automation.pages.PaymentPage;
 import com.automation.pages.ProductDetailPage;
 import com.automation.pages.ProductPage;
 
+import helper.ConfigManager;
+
 public class CheckouTest extends BaseTest{
 
     Page page;
@@ -38,7 +40,8 @@ public class CheckouTest extends BaseTest{
      */
     @BeforeClass
     public void setUp() {
-        super.setUp();
+        String url = ConfigManager.getUrl();
+        super.setUp(url);
         page = new Page(driver);
         loginPage = new LoginPage(driver);
         productsPage = new ProductPage(driver);

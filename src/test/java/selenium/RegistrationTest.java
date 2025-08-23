@@ -12,6 +12,8 @@ import com.automation.pages.LoginPage;
 import com.automation.pages.Page;
 import com.automation.pages.SignUpPage;
 
+import helper.ConfigManager;
+
 public class RegistrationTest extends BaseTest{
 
     Page page;
@@ -22,7 +24,8 @@ public class RegistrationTest extends BaseTest{
 
     @BeforeClass
     public void setUp() {
-        super.setUp();
+        String url = ConfigManager.getUrl();
+        super.setUp(url);
         page = new Page(driver);
         loginPage = new LoginPage(driver);
         signUpPage = new SignUpPage(driver);

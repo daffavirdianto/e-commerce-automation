@@ -23,7 +23,7 @@ This repository contains a robust Test Automation Framework leveraging Selenium 
 
 1. **Clone the repository:**
     ```bash
-    git clone https://github.com/your-username/web-automation-playground.git
+    git clone https://github.com/daffavirdianto/e-commerce-automation
     ```
 2. **Install dependencies:**
     ```bash

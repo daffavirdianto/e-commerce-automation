@@ -58,12 +58,6 @@ public class LoginPage {
         return driver.findElement(signUpTitle).getText();
     }
 
-    public String getErrorMessageJS() {
-        JavascriptExecutor js = (JavascriptExecutor) driver; 
-        String validationMessage = (String) js.executeScript("return arguments[0].validationMessage;", emailInputLogin);
-        return validationMessage;
-    }
-
     public String getErrorMessage(String email) {
         String actualError;
 

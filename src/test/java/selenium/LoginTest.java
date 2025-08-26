@@ -24,6 +24,7 @@ public class LoginTest extends BaseTest {
         
         page = new Page(driver);
         loginPage = new LoginPage(driver);
+        System.out.println("LoginTest is running...");
     }
 
     @Test
@@ -58,8 +59,7 @@ public class LoginTest extends BaseTest {
 
     @AfterMethod
     public void tearDown() {
-        if (driver != null) {
-            driver.quit();
-        }
+        System.out.println("LoginTest is down...");
+        super.tearDown();
     }
 }

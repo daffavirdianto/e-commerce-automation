@@ -7,7 +7,7 @@ Feature: Checkout Scenario
 
     Scenario: Customers buy a product
         When Customer view a product "Pure Cotton Neon Green Tshirt"
-        And Customer add the quantity of products
+        And Customer add the quantity "2" of products
         Then Verify Product successfully added "Pure Cotton Neon Green Tshirt" on cart page
         When Customer redirect to checkout page
         When Customer redirect to payment page

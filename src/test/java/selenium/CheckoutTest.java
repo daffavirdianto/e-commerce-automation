@@ -50,6 +50,8 @@ public class CheckoutTest extends BaseTest{
         checkoutPage = new CheckoutPage(driver);
         paymentPage = new PaymentPage(driver);
         paymentDonePage = new PaymentDonePage(driver);
+
+        System.out.println("CheckoutTest is running...");
     }
 
     @Test
@@ -59,6 +61,7 @@ public class CheckoutTest extends BaseTest{
         Assert.assertEquals(loginPage.getLoginTitle(), "Login to your account", "Login Page title is not as expected");
         loginPage.login("daffa.virdianto@gmail.com", "daffa123");
         Assert.assertEquals(page.getLoginSuccess(), "Daffa Virdianto", "Login success message is not as expected");
+        System.out.println("Login Success");
     }
 
     @Test(dependsOnMethods = "testLoginWithValidCredentials")
@@ -71,7 +74,7 @@ public class CheckoutTest extends BaseTest{
         Assert.assertEquals(productsPage.getProductTitle(), "MEN - TSHIRTS PRODUCTS", "Filtered product title is not as expected");
 
         productsPage.viewDetailProduct(Tshirt);
-        productDetailPage.setQuantity();
+        productDetailPage.setQuantity("2");
         productDetailPage.viewCart();
         Assert.assertEquals(cartPage.getPageTitle(), "Shopping Cart", "Cart Title is not as expected");
         Assert.assertTrue(cartPage.isProductInCart(Tshirt), "Product name is not match");
@@ -92,6 +95,7 @@ public class CheckoutTest extends BaseTest{
 
     @AfterClass
     public void tearDown() {
+        System.out.println("CheckoutTest is down...");
         super.tearDown();
     }
 }

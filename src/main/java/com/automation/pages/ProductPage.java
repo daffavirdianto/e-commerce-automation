@@ -47,7 +47,7 @@ public class ProductPage {
         List<WebElement> products = driver.findElements(listOfProducts);
         for (int i = 0; i < products.size(); i++) {
             WebElement nameElement = products.get(i).findElement(titleProduct);
-            System.out.println("Product title: " + nameElement.getText());
+            System.out.println("Searching for product: " + nameElement.getText());
             if (nameElement.getText().equals(productName)) {
                 System.out.println("Product '" + productName + "' found at index: " + i);
                 return i;

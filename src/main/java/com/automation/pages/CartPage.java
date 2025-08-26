@@ -34,7 +34,7 @@ public class CartPage {
     public boolean isProductInCart(String productName) {
         for (WebElement row : driver.findElements(listOfProducts)) {
             if (row.getText().contains(productName)) {
-                System.out.println("Name Product : " + row.getText());
+                System.out.println("Product is in the cart");
                 return true;
             }
         }

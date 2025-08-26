@@ -60,28 +60,24 @@ public class SignUpPage {
     By signUpTitle = By.xpath("//b[contains(text(), 'Enter Account Information')]");
     By signUpButton = By.xpath("//form[@action='/signup']/button");
 
-    public void selectGender() {
+    public void inputAccountInformation(String password, String dayValue, String monthValue, String yearValue) {
         genderRadioButton.click();
-    }
-
-    public void enterPassword(String password) {
         passwordInput.sendKeys(password);
+        selectDay(dayValue);
+        selectMonth(monthValue);
+        selectYear(yearValue);
     }
 
-    public void enterFirstName(String firstName) {
+    public void inputAddressInformation(String firstName, String lastName, String company, String address, String country, String state, String city, String zipcode, String mobileNumber) {
         firstNameInput.sendKeys(firstName);
-    }
-
-    public void enterLastName(String lastName) {
         lastNameInput.sendKeys(lastName);
-    }
-
-    public void enterCompany(String company) {
         companyInput.sendKeys(company);
-    }
-
-    public void enterAddress(String address) {
         addressInput.sendKeys(address);
+        selectCountry(country);
+        stateInput.sendKeys(state);
+        cityInput.sendKeys(city);
+        zipcodeInput.sendKeys(zipcode);
+        mobileNumberInput.sendKeys(mobileNumber);
     }
 
     public void selectDay(String dayValue) {
@@ -102,22 +98,6 @@ public class SignUpPage {
     public void selectCountry(String countryValue) {
         countryDropdown.click();
         countryDropdown.findElement(By.xpath("//select[@id='country']/option[@value='" + countryValue + "']")).click();
-    }
-
-    public void enterState(String state) {
-        stateInput.sendKeys(state);
-    }
-
-    public void enterCity(String city) {
-        cityInput.sendKeys(city);
-    }
-
-    public void enterZipcode(String zipcode) {
-        zipcodeInput.sendKeys(zipcode);
-    }
-
-    public void enterMobileNumber(String mobileNumber) {
-        mobileNumberInput.sendKeys(mobileNumber);
     }
 
     public void clickSignUpButton() {

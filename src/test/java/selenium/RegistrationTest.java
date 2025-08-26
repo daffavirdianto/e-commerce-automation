@@ -31,6 +31,7 @@ public class RegistrationTest extends BaseTest{
         signUpPage = new SignUpPage(driver);
         accountCreatedPage = new AccountCreatedPage(driver);
         deleteAccountPage = new DeleteAccountPage(driver);
+        System.out.println("RegistrationTest is running...");
     }
 
     @Test
@@ -43,20 +44,8 @@ public class RegistrationTest extends BaseTest{
         loginPage.validSignUp("Daffa Virdianto", "daffa.virdianto1@gmail.com");
 
         Assert.assertEquals(signUpPage.getAcountInformationTitle(), "ENTER ACCOUNT INFORMATION", "SignUp Page title is not as expected");
-        signUpPage.selectGender();
-        signUpPage.enterPassword("daffa123");
-        signUpPage.enterFirstName("Daffa");
-        signUpPage.enterLastName("Virdianto");
-        signUpPage.enterCompany("Playground");
-        signUpPage.enterAddress("Jl. Raya No. 123");
-        signUpPage.selectDay("10");
-        signUpPage.selectMonth("9");
-        signUpPage.selectYear("1999");
-        signUpPage.selectCountry("Singapore");
-        signUpPage.enterState("Jakarta");
-        signUpPage.enterCity("Jakarta");
-        signUpPage.enterZipcode("12345");
-        signUpPage.enterMobileNumber("08123456789");
+        signUpPage.inputAccountInformation("Daffa12345", "10", "9", "1998");
+        signUpPage.inputAddressInformation("Daffa", "Virdianto", "Playground", "Jl. Raya No. 123", "Singapore", "Jakarta", "Jakarta", "12345", "08123456789");
         signUpPage.clickSignUpButton();
 
         Assert.assertEquals(accountCreatedPage.getSuccessMessage(), "ACCOUNT CREATED!", "Success message does not match expected value.");
@@ -72,6 +61,7 @@ public class RegistrationTest extends BaseTest{
 
     @AfterClass
     public void tearDown() {
+        System.out.println("RegistrationTest is down...");
         super.tearDown();
     }
 }

@@ -61,9 +61,9 @@ public class StepDefinitions extends BaseTest{
         productsPage.viewDetailProduct(productName);
     }
     
-    @And("Customer add the quantity of products")
-    public void customer_add_the_quantity_of_products() throws InterruptedException {
-        productDetailPage.setQuantity();
+    @And("Customer add the quantity {string} of products")
+    public void customer_add_the_quantity_of_products(String quantity) throws InterruptedException {
+        productDetailPage.setQuantity(quantity);
     }
     
     @Then("Verify Product successfully added {string} on cart page")

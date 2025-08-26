@@ -41,10 +41,12 @@ public class PaymentPage {
         inputCVC.sendKeys("212");
         inputExpiryMonth.sendKeys("12");
         inputExpiryYear.sendKeys("2025");
+        System.out.println("Set payment");
     }
 
     public void sendPayment() {
         payBtn.click();
+        System.out.println("Send payment");
     }
 
     public String getPageTitle() {

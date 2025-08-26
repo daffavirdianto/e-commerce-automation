@@ -23,11 +23,11 @@ public class ProductDetailPage {
     @FindBy(xpath = "//p/a[@href='/view_cart']")
     public WebElement viewCartBtn;
 
-    public void setQuantity() throws InterruptedException {
+    public void setQuantity(String quantity) {
         inputQuantity.clear();
-        inputQuantity.sendKeys("2");
+        System.out.println("Set quantity");
+        inputQuantity.sendKeys(quantity);
         addToCartBtn.click();
-        Thread.sleep(20);
     }
 
     public void viewCart() {
